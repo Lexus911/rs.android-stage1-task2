@@ -10,7 +10,7 @@ class DateFormatter {
 
        fun toTextDay(day: String, month: String, year: String): String {
         val a = "${year}-${month}-${day}"
-        val format = DateTimeFormatter.ofPattern("uuuu-M-dd").withResolverStyle(ResolverStyle.STRICT)
+        val format = DateTimeFormatter.ofPattern("uuuu-M-dd").withResolverStyle(ResolverStyle.STRICT).withLocale(Locale("ru"))
 
        try {
            val date = LocalDate.parse(a, format)
